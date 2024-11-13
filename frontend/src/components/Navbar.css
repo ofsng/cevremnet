@@ -1,0 +1,47 @@
+/* Updated Navbar.css - Fixed to Top Only */
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #1d4ed8; /* Solid color for navbar */
+  color: white;
+  height: 60px;
+  z-index: 1000; /* Ensures navbar stays above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.navbar .links a:hover {
+  color: #d1d5db;
+}
+
+.navbar .cta-button {
+  padding: 0.5rem 1rem;
+  background-color: #10b981;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar .cta-button:hover {
+  background-color: #059669;
+}

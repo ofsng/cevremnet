@@ -1,0 +1,12 @@
+/* src/index.css */
+
+/* TailwindCSS Temel, Bileşen ve Yardımcı Stil Dosyalarını Dahil Et */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Projeye Özel Stil Tanımları Ekleyebilirsiniz */
+body {
+  @apply bg-gray-100; /* Arka plan rengini hafif gri yapar */
+  font-family: 'Arial', sans-serif;
+}

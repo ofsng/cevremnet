@@ -1,4 +1,4 @@
-// Çevrem.net Kullanıcı Denetleyicisi - userController.js
+// Cevrem.net Kullanıcı Denetleyicisi - userController.js
 // Kullanıcı işlemleri için denetleyici işlevleri.
 
 const User = require('../models/User');
@@ -92,7 +92,7 @@ const sendPasswordReset = async (req, res) => {
     // E-posta gönderimi
     await sendEmail({
       email: user.email,
-      subject: 'Çevrem.net Şifre Sıfırlama',
+      subject: 'Cevrem.net Şifre Sıfırlama',
       message,
     });
 

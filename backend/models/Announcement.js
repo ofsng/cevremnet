@@ -1,4 +1,4 @@
-// Çevrem.net Duyuru Modeli - Announcement.js
+// Cevrem.net Duyuru Modeli - Announcement.js
 // Duyuru veritabanı şeması ve işlevleri.
 
 const mongoose = require('mongoose');

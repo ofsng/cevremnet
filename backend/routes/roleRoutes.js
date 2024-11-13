@@ -1,4 +1,4 @@
-// Çevrem.net Rol Rotaları - roleRoutes.js
+// Cevrem.net Rol Rotaları - roleRoutes.js
 // Rol işlemleri ile ilgili API rotaları.
 
 const express = require('express');

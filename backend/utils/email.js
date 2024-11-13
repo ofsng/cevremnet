@@ -1,4 +1,4 @@
-// Çevrem.net E-posta Gönderim İşlevi - email.js
+// Çevrem.net Utils - email.js
 // Kullanıcılara e-posta gönderimi için yardımcı işlevler.
 
 const nodemailer = require('nodemailer');

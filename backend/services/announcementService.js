@@ -1,4 +1,4 @@
-// Çevrem.net Services - announcementService.js
+// Cevrem.net Services - announcementService.js
 // Duyuru işlemleri için servis işlevleri.
 
 const Announcement = require('../models/Announcement');

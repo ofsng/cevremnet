@@ -1,4 +1,4 @@
-// Çevrem.net Rol Modeli - Role.js
+// Cevrem.net Rol Modeli - Role.js
 // Kullanıcı rolü veritabanı şeması ve işlevleri.
 
 const mongoose = require('mongoose');

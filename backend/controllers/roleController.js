@@ -1,4 +1,4 @@
-// Çevrem.net Rol Denetleyicisi - roleController.js
+// Cevrem.net Rol Denetleyicisi - roleController.js
 // Kullanıcı rolleri ile ilgili işlevler.
 
 const Role = require('../models/Role');

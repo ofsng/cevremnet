@@ -1,4 +1,4 @@
-// Çevrem.net Kullanıcı Kimlik Doğrulama Middleware - authMiddleware.js
+// Cevrem.net Kullanıcı Kimlik Doğrulama Middleware - authMiddleware.js
 // Kullanıcı kimlik doğrulaması için middleware.
 
 const jwt = require('jsonwebtoken');

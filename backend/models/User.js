@@ -1,4 +1,4 @@
-// Çevrem.net Kullanıcı Modeli - User.js
+// Cevrem.net Kullanıcı Modeli - User.js
 // Kullanıcı veritabanı şeması ve işlevleri.
 
 const mongoose = require('mongoose');

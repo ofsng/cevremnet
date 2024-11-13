@@ -1,4 +1,4 @@
-// Çevrem.net Rol Yetkilendirme Middleware - roleMiddleware.js
+// Cevrem.net Rol Yetkilendirme Middleware - roleMiddleware.js
 // Belirli işlemleri sadece belirli rollerin yapabilmesi için yetkilendirme.
 
 const roleMiddleware = (roles) => {

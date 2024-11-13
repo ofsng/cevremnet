@@ -1,4 +1,4 @@
-// Çevrem.net Tests - announcement.test.js
+// Cevrem.net Tests - announcement.test.js
 // Duyuru işlemleri için birim testleri.
 
 const request = require('supertest');
@@ -10,7 +10,7 @@ describe('Announcement Routes', () => {
   beforeAll(async () => {
     // Kullanıcı kaydı ve giriş işlemi
     const res = await request(app)
-      .post('/api/users/register')
+      .post('http://localhost:5001/api/users/register')
       .send({
         name: 'Test User',
         email: 'testuser@example.com',

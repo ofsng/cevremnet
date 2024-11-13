@@ -1,7 +1,7 @@
 // Çevrem.net Utils - helpers.js
 // Genel yardımcı işlevler.
 
-import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
 
 const formatDate = (date) => {
   return new Intl.DateTimeFormat('tr-TR', {

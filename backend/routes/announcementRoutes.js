@@ -1,4 +1,4 @@
-// Çevrem.net Duyuru Rotaları - announcementRoutes.js
+// Cevrem.net Duyuru Rotaları - announcementRoutes.js
 // Duyuru işlemleri ile ilgili API rotaları.
 
 const express = require('express');

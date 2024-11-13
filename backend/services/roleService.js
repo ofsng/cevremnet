@@ -1,4 +1,4 @@
-// Çevrem.net Services - roleService.js
+// Cevrem.net Services - roleService.js
 // Rol işlemleri için servis işlevleri.
 
 const Role = require('../models/Role');

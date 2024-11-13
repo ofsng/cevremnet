@@ -1,4 +1,4 @@
-// Çevrem.net Duyuru Denetleyicisi - announcementController.js
+// Cevrem.net Duyuru Denetleyicisi - announcementController.js
 // Duyuru işlemleri için denetleyici işlevleri.
 
 const Announcement = require('../models/Announcement');

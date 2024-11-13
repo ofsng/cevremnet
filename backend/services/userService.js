@@ -1,4 +1,4 @@
-// Çevrem.net Services - userService.js
+// Cevrem.net Services - userService.js
 // Kullanıcı işlemleri için servis işlevleri.
 
 const User = require('../models/User');

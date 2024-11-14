@@ -1,4 +1,4 @@
-// Çevrem.net Duyuru Formu Bileşeni - AnnouncementForm.js
+// Cevrem.net Duyuru Formu Bileşeni - AnnouncementForm.js
 import React, { useState } from 'react';
 import './AnnouncementForm.css';
 

@@ -1,4 +1,4 @@
-// Çevrem.net Rol Servisi - roleService.js
+// Cevrem.net Rol Servisi - roleService.js
 import axios from 'axios';
 
 const API_URL = '/api/roles';

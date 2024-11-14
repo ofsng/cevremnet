@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const getUserProfile = async (token) => {
-  return await axios.get('/api/users/profile', {
+  return await axios.get('http://localhost:5001/api/users/profile', {
     headers: {
       Authorization: `Bearer ${token}`,
     },

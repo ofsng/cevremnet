@@ -1,4 +1,4 @@
-// Çevrem.net Kayıt Sayfası - RegisterPage.js
+// Cevrem.net Kayıt Sayfası - RegisterPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -13,7 +13,7 @@ const RegisterPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/users/register', { name, email, password });
+      const response = await axios.post('http://localhost:5001/api/users/register', { name, email, password });
       if (response.status === 201) {
         navigate('/login');
       }

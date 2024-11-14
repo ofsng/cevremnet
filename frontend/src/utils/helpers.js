@@ -1,4 +1,4 @@
-// Çevrem.net Yardımcı Fonksiyonlar - helpers.js
+// Cevrem.net Yardımcı Fonksiyonlar - helpers.js
 
 // Tarih formatlama işlevi
 export const formatDate = (dateString) => {

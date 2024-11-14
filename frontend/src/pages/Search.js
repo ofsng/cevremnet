@@ -1,4 +1,4 @@
-// Çevrem.net Arama Sayfası Bileşeni - Search.js
+// Cevrem.net Arama Sayfası Bileşeni - Search.js
 import React, { useState, useEffect } from 'react';
 import userService from '../services/userService';
 import ProfileCard from '../components/ProfileCard';

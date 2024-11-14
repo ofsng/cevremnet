@@ -1,4 +1,4 @@
-// Çevrem.net Rol Context'i - roleContext.js
+// Cevrem.net Rol Context'i - roleContext.js
 import React, { createContext, useReducer, useContext, useEffect } from 'react';
 import roleService from '../services/roleService';
 

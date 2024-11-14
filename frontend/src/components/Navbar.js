@@ -1,11 +1,13 @@
-// Çevrem.net Navbar Bileşeni - Navbar.js
+// src/components/Navbar.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { user, logout } = useAuth();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -30,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo text-2xl font-bold">
           <Link to="/" className="text-white hover:text-gray-200">
-            Çevrem.net
+            Cevrem.net
           </Link>
         </div>
         <div className="block lg:hidden">
@@ -63,7 +65,7 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`links flex-col lg:flex lg:flex-row lg:space-x-4 ${isOpen ? 'block' : 'hidden'} lg:block`}>          
+        <div className={`links flex-col lg:flex lg:flex-row lg:space-x-4 ${isOpen ? 'block' : 'hidden'} lg:block`}>
           <Link to="/" className="hover:text-gray-200 mt-2 lg:mt-0 transition duration-300 ease-in-out">
             Ana Sayfa
           </Link>
@@ -79,12 +81,28 @@ const Navbar = () => {
           <Link to="/blog" className="hover:text-gray-200 mt-2 lg:mt-0 transition duration-300 ease-in-out">
             Blog
           </Link>
-          <Link to="/login" className="hover:text-gray-200 mt-2 lg:mt-0 transition duration-300 ease-in-out">
-            Giriş Yap
-          </Link>
-          <Link to="/register" className="cta-button bg-green-600 text-white py-1 px-4 rounded-lg hover:bg-green-700 mt-2 lg:mt-0 transition duration-300 ease-in-out">
-            Üye Ol
-          </Link>
+          {user ? (
+            <>
+              <Link to="/profile" className="hover:text-gray-200 mt-2 lg:mt-0 transition duration-300 ease-in-out">
+                Profilim
+              </Link>
+              <button
+                onClick={logout}
+                className="bg-red-600 text-white py-1 px-4 rounded-lg hover:bg-red-700 mt-2 lg:mt-0 transition duration-300 ease-in-out"
+              >
+                Çıkış Yap
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="hover:text-gray-200 mt-2 lg:mt-0 transition duration-300 ease-in-out">
+                Giriş Yap
+              </Link>
+              <Link to="/register" className="cta-button bg-green-600 text-white py-1 px-4 rounded-lg hover:bg-green-700 mt-2 lg:mt-0 transition duration-300 ease-in-out">
+                Üye Ol
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </nav>

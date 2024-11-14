@@ -10,7 +10,7 @@ const Home = () => {
       {/* <header className="main-header">
         <nav className="navbar">
           <div className="logo">
-            <Link to="/">Çevrem.net</Link>
+            <Link to="/">Cevrem.net</Link>
           </div>
           <ul className="nav-links">
             <li><Link to="/features">Özellikler</Link></li>
@@ -29,7 +29,7 @@ const Home = () => {
         </video>
         <div className="hero-overlay">
           <div className="hero-content">
-            <h1>Hoş Geldiniz Çevrem.net!</h1>
+            <h1>Hoş Geldiniz Cevrem.net!</h1>
             <p>Profesyonellerin bir araya geldiği, projelerini sergilediği ve iş fırsatları yarattığı bir networking platformuna hoş geldiniz.</p>
             <Link to="/register" className="cta-button">
               Kayıt Ol ve Başla
@@ -68,15 +68,15 @@ const Home = () => {
         <h2>Kullanıcı Yorumları</h2>
         <div className="testimonials-grid">
           <div className="testimonial-card">
-            <p>"Çevrem.net sayesinde birçok yeni bağlantı kurdum ve iş fırsatları yakaladım. Gerçekten harika bir platform!"</p>
+            <p>"Cevrem.net sayesinde birçok yeni bağlantı kurdum ve iş fırsatları yakaladım. Gerçekten harika bir platform!"</p>
             <span>- Ahmet Yılmaz</span>
           </div>
           <div className="testimonial-card">
-            <p>"Projelerimi sergileyerek işbirliği yapmak isteyen birçok profesyonelle tanıştım. Çevrem.net'i kesinlikle tavsiye ederim!"</p>
+            <p>"Projelerimi sergileyerek işbirliği yapmak isteyen birçok profesyonelle tanıştım. Cevrem.net'i kesinlikle tavsiye ederim!"</p>
             <span>- Elif Kaya</span>
           </div>
           <div className="testimonial-card">
-            <p>"Platformun kullanıcı dostu arayüzü sayesinde kariyerimde büyük bir adım attım. Teşekkürler Çevrem.net!"</p>
+            <p>"Platformun kullanıcı dostu arayüzü sayesinde kariyerimde büyük bir adım attım. Teşekkürler Cevrem.net!"</p>
             <span>- Mehmet Demir</span>
           </div>
         </div>
@@ -84,7 +84,7 @@ const Home = () => {
 
       <section className="call-to-action-section">
         <h2>Bize Katılın</h2>
-        <p>Çevrem.net, sürekli gelişen ve büyüyen bir topluluk olarak, sizleri de aramızda görmekten mutluluk duyar. Şimdi katılın ve profesyonel ağınızı büyütmek için ilk adımı atın!</p>
+        <p>Cevrem.net, sürekli gelişen ve büyüyen bir topluluk olarak, sizleri de aramızda görmekten mutluluk duyar. Şimdi katılın ve profesyonel ağınızı büyütmek için ilk adımı atın!</p>
         <Link to="/register" className="cta-button">
           Şimdi Katılın
         </Link>
@@ -93,7 +93,7 @@ const Home = () => {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-logo">
-            <Link to="/">Çevrem.net</Link>
+            <Link to="/">Cevrem.net</Link>
           </div>
           <ul className="footer-links">
             <li><Link to="/features">Özellikler</Link></li>
@@ -114,7 +114,7 @@ const Home = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 Çevrem.net. Tüm hakları saklıdır.</p>
+          <p>&copy; 2024 Cevrem.net. Tüm hakları saklıdır.</p>
         </div>
       </footer>
     </div>

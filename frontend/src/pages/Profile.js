@@ -1,16 +1,17 @@
 // src/pages/Profile.js
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { UserContext } from '../context/userContext';
+import useAuth from '../hooks/useAuth';
 
 function Profile() {
   const [profile, setProfile] = useState(null);
-  const { user } = useContext(UserContext);
+  const { user } = useAuth();
 
   useEffect(() => {
+    if (!user) return;
     const fetchProfile = async () => {
       try {
-        const response = await axios.get(`/api/users/profile`, {
+        const response = await axios.get(`http://localhost:5001/api/users/profile`, {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
@@ -22,6 +23,10 @@ function Profile() {
     };
     fetchProfile();
   }, [user]);
+
+  if (!user) {
+    return <p>Lütfen giriş yapın.</p>;
+  }
 
   return (
     <div>

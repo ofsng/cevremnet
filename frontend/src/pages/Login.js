@@ -9,7 +9,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/users/login', { email, password });
+      const response = await axios.post('http://localhost:5001/api/users/login', { email, password });
       console.log('Giriş başarılı:', response.data);
     } catch (error) {
       console.error('Giriş hatası:', error);

@@ -1,4 +1,4 @@
-// Çevrem.net Role Badge Bileşeni - RoleBadge.js
+// Cevrem.net Role Badge Bileşeni - RoleBadge.js
 import React from 'react';
 
 const RoleBadge = ({ role }) => {

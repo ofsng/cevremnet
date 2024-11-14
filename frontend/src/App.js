@@ -1,6 +1,7 @@
-// Çevrem.net Ana Bileşen - App.js
+// Cevrem.net Ana Bileşen - App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './hooks/useAuth';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import RegisterPage from './pages/RegisterPage';
@@ -16,24 +17,28 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div className="container mx-auto mt-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/create-announcement" element={<CreateAnnouncement />} />
-          <Route path="/announcements" element={<Announcements />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/profile/update" element={<UpdateProfile />} />
-          <Route path="/search" element={<Search />} />
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <div className="container mx-auto mt-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/create-announcement" element={<CreateAnnouncement />} />
+            <Route path="/announcements" element={<Announcements />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/update" element={<UpdateProfile />} />
+            <Route path="/search" element={<Search />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
 }
 
 export default App;
+
+

@@ -1,7 +1,7 @@
 // Cevrem.net Ana Bileşen - App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './hooks/useAuth';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth } from './hooks/useAuth';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import RegisterPage from './pages/RegisterPage';
@@ -15,30 +15,75 @@ import Search from './pages/Search';
 import Footer from './components/Footer';
 import './App.css';
 
+function ProtectedRoute({ children }) {
+  const { user } = useAuth();
+  return user ? children : <Navigate to="/login" />;
+}
+
 function App() {
+  const { user } = useAuth();
+
   return (
-    <AuthProvider>
-      <Router>
-        <Navbar />
-        <div className="container mx-auto mt-4">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/create-announcement" element={<CreateAnnouncement />} />
-            <Route path="/announcements" element={<Announcements />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/profile/update" element={<UpdateProfile />} />
-            <Route path="/search" element={<Search />} />
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
-    </AuthProvider>
+    <Router>
+      <Navbar />
+      <div className="container mx-auto mt-4">
+        <Routes>
+          <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Home />} />
+          <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <RegisterPage />} />
+          <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <LoginPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/create-announcement"
+            element={
+              <ProtectedRoute>
+                <CreateAnnouncement />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/announcements"
+            element={
+              <ProtectedRoute>
+                <Announcements />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile/update"
+            element={
+              <ProtectedRoute>
+                <UpdateProfile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <ProtectedRoute>
+                <Search />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 
 export default App;
-
-

@@ -7,17 +7,17 @@ const Guide = () => {
   const { user, setUser } = useAuth();
   const navigate = useNavigate();
 
+  if (!user) {
+    navigate('/login');
+    return null;
+  }
+
   const handleCompleteProfile = () => {
     const updatedUser = { ...user, profileComplete: true };
     setUser(updatedUser);
     localStorage.setItem('user', JSON.stringify(updatedUser));
     navigate('/complete-profile');
   };
-
-  if (!user) {
-    navigate('/login');
-    return null;
-  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">

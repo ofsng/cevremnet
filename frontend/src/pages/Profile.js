@@ -35,7 +35,7 @@ function Profile() {
           <h2>Merhaba, {profile.name}</h2>
           <p>Email: {profile.email}</p>
           <p>Rol: {profile.role}</p>
-          <button>Profili Güncelle</button>
+          <button onClick={() => console.log('Profili Güncelle')}>Profili Güncelle</button>
         </div>
       ) : (
         <p>Profil Yükleniyor...</p>
